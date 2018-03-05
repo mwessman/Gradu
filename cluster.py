@@ -9,7 +9,7 @@ import math
 
 # Input the directory of the point cloud data here
 # Tested on txt-files with X Y Z coordinates
-directory = "/Users/Michael/Documents/Gradu/3d_new/aa1/"
+directory = "./input.txt"
 filelist = []
 n=1
 center = np.zeros(shape=(0,3))
@@ -158,7 +158,7 @@ for file in filelist:
     plt.xlim(0,150)
     plt.ylim(-50,50)
     # Add the output directory and name of the figures you want to save
-    plt.savefig("/Users/Michael/Documents/Gradu/3d_new/fig1/figure"+str(n)+'.png', dpi=100)
+    plt.savefig("./figure"+str(n)+'.png', dpi=100)
     #plt.show()
     n+=1
     plt.clf()
