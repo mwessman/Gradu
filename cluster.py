@@ -112,8 +112,11 @@ for file in filelist:
         #ax.scatter(minx[0],minx[1],minx[2], c='r', s=80, edgecolor='k', marker='^')
         #ax.scatter(maxx[0],maxx[1],maxx[2], c='r', s=80, edgecolor='k', marker='v')
 
-
-    previousvelocity = (velocity1.mean(0))
+    if (n_clusters_ >= 40):
+        previousvelocity = (velocity1.mean(0))
+    else:
+        previousvelocity = 0
+        
     previouscenter = center
 
     previouspoints3 = previouspoints2
